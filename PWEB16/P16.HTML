@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Latihan Tugas Alert dan Dialog Box</title>
+</head>
+<body>
+
+    <div id="hasilOutput"></div>
+
+    <script>
+        // 1. Alert Box [cite: 129, 132]
+        alert("Selamat datang di website interaktif JavaScript!");
+
+        // 2. Dialog Box (Confirm) - Menanyakan apakah ingin mengisi data [cite: 143]
+        var yakin = confirm("Apakah Anda ingin mengisi data pengguna?");
+
+        if (yakin) {
+            // 3. Dialo                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              g Box (Prompt) - Meminta input nama [cite: 136]
+            var nama = prompt("Masukkan nama Anda!");
+
+            // Jika user menekan OK dan nama tidak kosong
+            if (nama) {
+                // 4. Keluar Informasi sesuai input (Ditulis ke Layar, BUKAN Alert) [cite: 146, 147, 148]
+                var tempatHasil = document.getElementById("hasilOutput");
+                
+                // Mengubah isi HTML sesuai gambar
+                tempatHasil.innerHTML = "<h1>Interaksi JavaScript</h1>" + 
+                                        "<p>Halo, " + nama + "! Terima kasih telah mengisi data.</p>";
+            } else {
+                // Jika user mengosongkan nama
+                document.write("<p>Nama tidak boleh kosong.</p>");
+            }
+        } else {
+            // Jika user menekan Cancel pada Confirm
+            document.write("<p>Anda memilih untuk tidak mengisi data.</p>");
+        }
+    </script>
+
+</body>
+</html>
